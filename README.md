@@ -1,0 +1,2 @@
+# Twint Utils
+Este programa pretende ser una recopilación de scripts que he ido elaborando para facilitarme el trabajo y la visualización de datos obtenidos con [Twint](https://github.com/twintproject/twint).
