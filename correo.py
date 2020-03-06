@@ -15,7 +15,7 @@ def escribirArchivo(listaDatos, nombreSalida):
         strDatos = strDatos + i + '\n'
     archivo.write(strDatos)
 
-def extraer(ruta, nombreSalida):
+def correo(ruta, nombreSalida):
     listaEmail = []
     archivo = open(ruta, 'r')
     listaLineas = archivo.readlines()
