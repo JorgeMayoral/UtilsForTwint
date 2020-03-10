@@ -3,6 +3,7 @@ import argparse
 import tabla
 import correo
 import coincidencias
+import multiusers
 
 parser = argparse.ArgumentParser(description='Procesa datos (en archivos .csv) obtenidos con Twint.')
 
@@ -17,6 +18,9 @@ parser.add_argument('-e', '--email', action='store',
 
 parser.add_argument('-c', '--coincidencias', nargs=2, action='store',
     help='Extrae las coincidencias entre 2 listas de seguidores o seguidos.')
+
+parser.add_argument('-m', '--multiusers', nargs=3, action='store',
+    help='Hace busqueda de un termine de una lista de usuarios.')
 
 parser.add_argument('-o', '--output', action='store',
     help='Especifica el nombre del archivo de salida (sin extensión).')
@@ -39,3 +43,10 @@ if args.coincidencias != None:
     archivo2 = args.coincidencias[1]
 
     coincidencias.coincidencias(archivo1, archivo2, nombreSalida)
+
+if args.multiusers != None:
+    archivo = args.multiusers[0]
+    busqueda = args.multiusers[1]
+    fecha = args.multiusers[2]
+
+    multiusers.multiusers(archivo, busqueda, fecha, nombreSalida)
